@@ -1,6 +1,5 @@
 const FailOnErrorsPlugin = require('fail-on-errors-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 
 const env = process.env.NODE_ENV || 'development';
@@ -18,11 +17,6 @@ module.exports = () => {
       template: 'src/devIndexTemplate.html',
       minify: false,
     })];
-  if (env === 'production') {
-    plugins.push(new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['./public/*'],
-    }));
-  }
   return {
     entry: {
       browserSupportBundle: './src/browserSupport/index.js',
