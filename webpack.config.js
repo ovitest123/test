@@ -24,7 +24,7 @@ module.exports = () => {
     },
     output: {
       filename: outputFileName,
-      path: path.resolve(__dirname, './arbitraryFolder'),
+      path: path.resolve(__dirname, './arbitraryFolder2'),
     },
     externals: {
       fabric: 'fabric',
