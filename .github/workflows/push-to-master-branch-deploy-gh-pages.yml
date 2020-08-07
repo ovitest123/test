@@ -22,6 +22,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: test # The branch the action should deploy to.
+          BRANCH: master # The branch the action should deploy to.
           FOLDER: arbitraryFolder4 # The folder the action should deploy from (source branch).
+          TARGET_FOLDER: public # The folder the action should deploy from (source branch).
           CLEAN: true # The folder the action should deploy from (source branch).
